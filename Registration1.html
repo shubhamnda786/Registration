@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<style>
+				.column1{
+					float: left;
+					width: 7%;
+					margin-top: 4px;
+					margin-left:5px;
+				}
+				.column2{
+					float: left;
+					width: 92%;
+					margin-top: 4px;
+				}
+		</style>
+		<title>Registration Form</title>
+	</head>
+	<body>
+		<form action='data.php' method='POST'>
+		<div>
+			<div>
+				<div class='column1'>Name: </div>
+				<div class='column2'><input type='text' name='Name' placeholder='Name'></div>
+			</div>
+			<div>
+				<div class='column1'>Email: </div>
+				<div class='column2'><input type='text' name='Email' placeholder='Email'></div>
+			</div>
+			<div>
+				<div class='column1'>Date Of Birth: </div>
+				<div class='column2'><input type='text' name='DOB' placeholder='YYYY-MM-DD'></div>
+			</div>
+			<div>
+				<div class='column1'><input type='Submit' value='SUBMIT' name='submit'></div>
+				<div class='column2'><input type='reset' value='RESET' name='reset'></div>
+			</div>
+		</div>
+		</form>
+	</body>
+</html>
