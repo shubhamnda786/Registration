@@ -1,68 +1,71 @@
-<html>
-	<head>
-		<style>
-				.column1{
-					float: left;
-					width: 7%;
-					margin-top: 4px;
-					margin-left:5px;
-				}
-				.column2{
-					float: left;
-					width: 92%;
-					margin-top: 4px;
-				}
-		</style>
-		<script>
-			function fieldValidate(){
-				var name = document.regForm.name.value;
-				var email = document.regForm.email.value;
-				var d_o_b = document.regForm.DOB.value;
-			
-				if(name == "" || name == null){
-					alert("Please enter the name");
-					return false;
-				}
-                if (name.match(/^[A-Za-z]+$/)) {
-                    return true;
-                }
-                else {
-                    alert("Only alphabets are allowed.");
-                    return false;
-                }
-				if((name.length<=2) || (name.length >20)){
-					alert("Please enter the name length between 2 and 20");
-					return false;
-				}
-                
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		.column1 {
+			float: left;
+			width: 7%;
+			margin-top: 4px;
+			margin-left: 5px;
+		}
 
-				if(email == "" || email == null){
-					alert("Please enter the Email");
-					return false;
-				}
-                if (email.match(/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/)) {
-                    return true;
-                }
-                else {
-                    alert("Please Enter Correct Email.");
-                    return false;
-                }
+		.column2 {
+			float: left;
+			width: 92%;
+			margin-top: 4px;
+		}
+	</style>
 
-				if(d_o_b == "" || d_o_b == null){
-					alert("Please enter the Date of Birth");
-					return false;
-				}
-                if (d_o_b.match(/^\d{4}-\d{2}-\d{2}$/)) {
-                    return true;
-                }
-                else {
-                    alert("Please Enter Correct Date of Birth.");
-                    return false;
-                }
+	<script type="text/javascript">
+		function fieldValidate() {
+			var name = document.regForm.name.value;
+			var email = document.regForm.email.value;
+			var d_o_b = document.regForm.DOB.value;
+
+			if (name == "" || name == null) {
+				alert("Please enter the name");
+				return false;
 			}
-		</script>
-		<title>Registration Form</title>
-	</head>
+			if (name.match(/^[A-Za-z]+$/)) {
+				return true;
+			}
+			else {
+				alert("Only alphabets are allowed.");
+				return false;
+			}
+			if ((name.length <= 2) || (name.length > 20)) {
+                alert("Please enter the name length between 2 and 20");
+                return false;
+			}
+
+			if (email == "" || email == null) {
+				alert("Please enter the Email");
+				return false;
+			}
+			if (email.match(/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/)) {
+				return true;
+			}
+			else {
+				alert("Please Enter Correct Email.");
+				return false;
+			}
+			if (d_o_b == "" || d_o_b == null) {
+				alert("Please enter the Date of Birth");
+				return false;
+			}
+			if (d_o_b.match(/^\d{4}-\d{2}-\d{2}$/)) {
+				return true;
+			}
+			else {
+				alert("Please Enter Correct Date of Birth.");
+				return false;
+			}
+		}
+	</script>
+	<title>Registration Form</title>
+</head>
 	<body>
 		<form method='POST' name='regForm' onsubmit='return fieldValidate()'>
 		<div>
